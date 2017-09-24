@@ -60,4 +60,8 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
+    public double substraction(Fraction b) {
+        return (double) this.numerator * b.denominator - b.numerator * this.denominator;
+    }
+    
 }
