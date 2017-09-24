@@ -13,6 +13,6 @@ public class FractionTest {
         fraction = new Fraction(1, 2);
         Fraction b = new Fraction(1, 2);
         assertEquals(0, fraction.substraction(b), 10e-5);
-    }
+    } 
 
 }
