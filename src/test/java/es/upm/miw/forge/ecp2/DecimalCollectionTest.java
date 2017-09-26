@@ -43,6 +43,17 @@ public class DecimalCollectionTest {
 		exception.expect(ArithmeticException.class);
 		new DecimalCollection().sum();
 	}
+	
+	@Test
+	public void testMultiply() {
+		assertEquals(-12.0, this.decimalCollection.multiply(), 10e-5);
+	}
+
+	@Test
+	public void testMultiplyArithmeticExceptionIfEmpty() {
+		exception.expect(ArithmeticException.class);
+		new DecimalCollection().multiply();
+	}
 
 	@Test
 	public void testHigher() {
