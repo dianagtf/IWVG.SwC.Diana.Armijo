@@ -64,5 +64,8 @@ public class Fraction {
     		assert ft != null;
     		return this.decimal() + ft.decimal();
     }
-    
+    		
+    public double substraction(Fraction b) {
+        return (double) this.numerator * b.denominator - b.numerator * this.denominator;
+    }
 }
