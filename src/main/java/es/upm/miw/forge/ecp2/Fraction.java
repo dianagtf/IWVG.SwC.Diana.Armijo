@@ -60,8 +60,12 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
+    public double plus(Fraction ft) {
+    		assert ft != null;
+    		return this.decimal() + ft.decimal();
+    }
+    		
     public double substraction(Fraction b) {
         return (double) this.numerator * b.denominator - b.numerator * this.denominator;
     }
-    
 }
