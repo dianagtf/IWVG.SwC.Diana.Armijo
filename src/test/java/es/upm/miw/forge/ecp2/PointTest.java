@@ -19,7 +19,7 @@ public class PointTest {
     public void testPuntoIntInt() {
         assertEquals(2, pt.getX());
         assertEquals(3, pt.getY());
-        assertEquals(4, pt.getY());
+        assertEquals(4, pt.getZ());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class PointTest {
 
     @Test
     public void testModulo() {
-        assertEquals(5.385, pt.module(), 10e-5);
+        assertEquals(5.38516, pt.module(), 10e-5);
     }
 
     @Test
@@ -44,8 +44,8 @@ public class PointTest {
     public void testTranslate() {
         this.pt.translateOrigin(new Point(1, 1, 1));
         assertEquals(1, pt.getX());
-        assertEquals(1, pt.getY());
-        assertEquals(1, pt.getZ());
+        assertEquals(2, pt.getY());
+        assertEquals(3, pt.getZ());
     }
 
     @Test
