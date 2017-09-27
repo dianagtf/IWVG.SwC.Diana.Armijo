@@ -70,6 +70,7 @@ public class Fraction {
     }
     
     public boolean greaterThan(Fraction f){
+        
         return decimal() > f.decimal();
     }
 }
