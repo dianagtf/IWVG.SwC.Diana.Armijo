@@ -12,13 +12,14 @@ public class PointTest {
 
     @Before
     public void before() {
-        pt = new Point(2, 3);
+        pt = new Point(2, 3, 4);
     }
 
     @Test
     public void testPuntoIntInt() {
         assertEquals(2, pt.getX());
         assertEquals(3, pt.getY());
+        assertEquals(4, pt.getY());
     }
 
     @Test
@@ -26,11 +27,12 @@ public class PointTest {
         pt = new Point();
         assertEquals(0, pt.getX());
         assertEquals(0, pt.getY());
+        assertEquals(0, pt.getZ());
     }
 
     @Test
     public void testModulo() {
-        assertEquals(3.6055, pt.module(), 10e-5);
+        assertEquals(5.385, pt.module(), 10e-5);
     }
 
     @Test
@@ -40,14 +42,15 @@ public class PointTest {
 
     @Test
     public void testTranslate() {
-        this.pt.translateOrigin(new Point(1, 1));
+        this.pt.translateOrigin(new Point(1, 1, 1));
         assertEquals(1, pt.getX());
-        assertEquals(2, pt.getY());
+        assertEquals(1, pt.getY());
+        assertEquals(1, pt.getZ());
     }
 
     @Test
     public void testToString() {
-        assertEquals("Point[2,3]", pt.toString());
+        assertEquals("Point[2,3,4]", pt.toString());
     }
 
 }
