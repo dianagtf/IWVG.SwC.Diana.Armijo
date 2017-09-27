@@ -68,4 +68,8 @@ public class Fraction {
     public double substraction(Fraction b) {
         return (double) this.numerator * b.denominator - b.numerator * this.denominator;
     }
+    
+    public boolean greaterThan(Fraction f){
+        return decimal() > f.decimal();
+    }
 }
