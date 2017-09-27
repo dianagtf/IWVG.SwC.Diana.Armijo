@@ -26,5 +26,12 @@ public class FractionTest {
     		Fraction ft2 = new Fraction(1, 2);
         assertEquals(1.0, fraction.plus(ft2), 10e-5);
     }
+    
+    @Test
+    public void testGreaterThan() {    
+            Fraction ft2 = new Fraction(1, 3);
+        assertEquals(true, fraction.greaterThan(ft2));
+    }
+    
 
 }
