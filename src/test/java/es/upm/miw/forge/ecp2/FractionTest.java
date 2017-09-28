@@ -15,6 +15,17 @@ public class FractionTest {
     }
 
     @Test
+    public void testFraction() {
+        assertEquals(1, fraction.getNumerator());
+        assertEquals(2, fraction.getDenominator());
+    }
+    
+    @Test
+    public void testDecimal() {
+        assertEquals(0.5, fraction.decimal(),0.001);
+    }
+    
+    @Test
     public void testSubstraction() {
         fraction = new Fraction(1, 2);
         Fraction b = new Fraction(1, 2);
